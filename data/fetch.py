@@ -1,9 +1,13 @@
-"""Refresh the data that the vol-surface notebook runs on (public endpoints, no keys needed).
-
-This writes two files next to this one. deribit_options.parquet is a single Deribit option-chain snapshot for BTC and ETH. btc_variance_profile.json is the intraday variance profile (weekday/weekend x ET hour) from the last 40 days of Binance BTCUSDT 1-minute candles, computed the same way as in `fair_value`.
-
-    python data/fetch.py
 """
+Pulls fresh data for the vol-surface notebook. Everything comes from public endpoints, so no need for api key
+
+deribit_options.parquet: a snapshot of Deribit BTC and ETH option chains
+
+how BTC variance is spread across the day split into weekdays and weekends built from the last 40 days of Binance BTCUSDT 1 minute candles
+
+run with python data/fetch.py
+"""
+
 from __future__ import annotations
 
 import json
