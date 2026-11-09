@@ -3,7 +3,7 @@ Fair value of short-dated crypto binaries, priced as European and Asian (TWAP) d
 
 P(up) = F((ln(E/K) - V/2) / sqrt(V))
 
-V is the variance to settlement, which I forecast with a seasonal EWMA. A mean-reverting variance level on deseasonalized 1-minute returns is multiplied by an intraday profile (weekday/weekend x ET hour), then integrated exactly over fractional minutes in forecast_var and season_sum. I also keep a flat EWMA, 24-hour realized variance and HAR as comparison models.
+V is the variance to settlement, which we forecast with a seasonal EWMA. A mean-reverting variance level on deseasonalized 1-minute returns is multiplied by an intraday profile (weekday/weekend x ET hour), then integrated exactly over fractional minutes in forecast_var and season_sum. We also keep a flat EWMA, 24-hour realized variance and HAR as comparison models.
 
 For TWAP settlement, E and V treat the prints already inside the averaging window as known. The remaining variance then scales with the cube of the window share still to come (see twap_moments).
 

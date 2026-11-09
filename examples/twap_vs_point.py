@@ -3,7 +3,7 @@ Why the 15-minute contract is an Asian digital and not a European one.
 
 A 15-minute up or down market settles on Chainlink's 60-second TWAP. Inside the final minute, part of the average is already known, so the contract gets decided faster than a point-price model expects.
 
-I price one contract on synthetic data, with spot held 1 bp above the strike through the final 90 seconds, once as a TWAP digital and once as a point digital.
+We price one contract on synthetic data, with spot held 1 bp above the strike through the final 90 seconds, once as a TWAP digital and once as a point digital.
 
 Run with: python examples/twap_vs_point.py
 """

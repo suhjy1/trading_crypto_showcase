@@ -1,13 +1,13 @@
 """
 Splits each fill's P&L into additive parts that sum to the realized P&L, row by row.
 
-decision_edge: model value at decision vs my quoted price.
+decision_edge: model value at decision vs our price.
 decision_to_fill: model drift between the decision and the fill.
 post_fill_markout: prevailing mid at a horizon vs model value at the fill.
 settlement_residual: outcome vs that mid.
 fee_term: fees and rebates.
 
-I use this to see where a strategy's edge goes, whether the model was wrong, the fill was adversely selected, or the market moved after the fill.
+We use this to see where a strategy's edge goes, whether the model was wrong, the fill was adversely selected, or the market moved after the fill.
 """
 
 from __future__ import annotations

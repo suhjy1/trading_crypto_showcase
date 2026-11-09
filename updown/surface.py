@@ -1,7 +1,7 @@
 """
 Arbitrage-free implied vol surface fitted to Deribit options with SSVI, and the digitals it implies.
 
-I wanted to know whether the options market could price the daily "above $K" ladders on Polymarket and Kalshi better than a realized-vol model. The answer depends on skew. A digital is -dC/dK, so on a skewed surface
+We wanted to know whether the options market could price the daily "above $K" ladders on Polymarket and Kalshi better than a realized-vol model. The answer depends on skew. A digital is -dC/dK, so on a skewed surface
 
 P(S_T > K) = N(d2) - phi(d2) * (dw/dk) / (2 sqrt(w))
 
@@ -11,11 +11,11 @@ parse_deribit_option and prepare: turn quotes into forward-based Black-76 implie
 
 fit_ssvi: Gatheral-Jacquier SSVI, either with one rho and phi per expiry (slices) or a single power-law phi (global). Total ATM variance theta cannot decrease by construction, so there is no calendar arbitrage, and each slice's phi is capped at the butterfly-free bound. butterfly_g and calendar_gaps check both conditions on the fitted surface.
 
-VarianceClock and w_at: since the 12:00 ET targets land between Deribit's 08:00 UTC expiries, I interpolate between expiries in variance time instead of clock time, using the intraday seasonal profile from fair_value.
+VarianceClock and w_at: since the 12:00 ET targets land between Deribit's 08:00 UTC expiries, we interpolate between expiries in variance time instead of clock time, using the intraday seasonal profile from fair_value.
 
 digitals: skew-aware digital probabilities next to the naive N(d2).
 
-I parked this work because Deribit's shortest expiry is daily. Stretching its smile to the 15-minute and hourly contracts is guesswork, and near expiry the realized-vol model is the better tool.
+We parked this work because Deribit's shortest expiry is daily. Stretching its smile to the 15-minute and hourly contracts is guesswork, and near expiry the realized-vol model is the better tool.
 """
 
 from __future__ import annotations

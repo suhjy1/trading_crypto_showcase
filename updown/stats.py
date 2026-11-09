@@ -7,7 +7,7 @@ ratio_t and ratio_diff_t: cluster-robust t-stats for per-share ratios such as P&
 
 wild_bounds: wild cluster bootstrap bounds on daily means. Every sign flip is enumerated up to 10 days, and Webb weights are used beyond that.
 
-verdict: the pass rule I fixed in advance and used for every strategy result. A POSITIVE verdict needs a lower bound above zero that survives dropping any single day, and dropping the two best days.
+verdict: the pass rule we fixed in advance and used for every strategy result. A POSITIVE verdict needs a lower bound above zero that survives dropping any single day, and dropping the two best days.
 """
 
 from __future__ import annotations
