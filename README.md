@@ -1,6 +1,8 @@
 # Pricing short-dated crypto binaries on Polymarket
 
 > **Note:** This is a condensed version of a larger private research codebase, trimmed to the pieces that show the pricing model and evaluation. Some write-ups refer to files that are not included here. Feel free to reach out if you have questions or want more details.
+>
+> The project write-up and four blog posts on it are at [suhjy1.github.io/projects/crypto-updown/](https://suhjy1.github.io/projects/crypto-updown/).
 
 ## Introduction
 
